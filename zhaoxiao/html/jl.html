@@ -42,7 +42,7 @@
                     <section class="clearfix">
                         <input class="fl" type="text" placeholder="姓名" v-model="resume.name"/><span>性别：</span>
                         <label><input class="sex" type="radio" name="sex" value="男" v-model="resume.sex"/>男</label>
-                        <label><input class="sex" type="radio" name="sex" value="女" type="radio" v-model="resume.sex"/>女</label>
+                        <label><input class="sex" type="radio" name="sex" value="女" v-model="resume.sex"/>女</label>
                     </section>
                     <section class="clearfix"><input class="fl" type="text" placeholder="生日" v-model="resume.birthday"/>
                         <div class="xiala">
@@ -108,7 +108,7 @@
                 </aside>
                 <div class="clear"></div>
                 <div class="wanshan wanshan1">
-                    <em class="quxiao">取消</em>
+                    <em class="quxiao" v-on:click="cancelBase($event,'bianjihou')">取消</em>
                     <a class="baocun" baocun="baocun1" href="javascript:;" v-on:click="saveBase($event,'bianjihou')">保存</a>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                 <dd><img src="images/jl.png" alt=""/></dd>
                 <dt>
                     <h4 class="clearfix"><span>{{resume.name}}</span><i>{{resume.sex}}/</i><var>{{resume.age}}岁</var></h4>
-                    <div class="clearfix juzhudi"><span>现居地：{{resume.city_live.city}}</span><span>户口地：{{resume.city_birth.city}}</span></div>
+                    <div class="clearfix juzhudi"><span>现居地：{{resume.city_live.province}}-{{resume.city_live.city}}</span><span>户口地：{{resume.city_birth.province}}-{{resume.city_birth.city}}</span></div>
                     <div class="juzhudi">工作经验：{{resume.work_experience}}</div>
                 </dt>
             </dl>
@@ -124,10 +124,10 @@
         <div class="jbxx jbxx1">
             <h3 class="clearfix title"><em></em><span>联系方式</span><a class="bianji1" href="javascript:;" v-on:click="editBase($event,'dianhua')">编辑</a></h3>
             <div class="dak" v-cloak v-bind:class="{hide:decide.base.isA}">
-                <section class="clearfix"><input class="fl" type="text" placeholder="电话" v-model="resume.telephone"/>
-                    <input class="fl" type="text" placeholder="邮箱" v-model="resume.email"/></section>
+                <section class="clearfix"><input id="test" class="fl" type="text" placeholder="电话" v-model="resume.telephone"/>
+                    <input class="fl" type="text" id="test1" placeholder="邮箱" v-model="resume.email"/></section>
                 <div class="wanshan wanshan1">
-                    <em class="quxiao">取消</em>
+                    <em class="quxiao" v-on:click="cancelBase($event,'dianhua')">取消</em>
                     <a class="baocun" baocun="baocun2" href="javascript:;" v-on:click="saveBase($event,'dianhua')">保存</a>
                 </div>
                 <div class="clear"></div>
@@ -138,10 +138,10 @@
             </div>
         </div> 
         <div class="jbxx jbxx1">
-            <h3 class="clearfix title"><em></em><span>个人形象</span><a class="bianji1 hide" href="javascript:;">编辑</a></h3>
-            <div class="hide dak">
-                <section class="clearfix"><input class="fl" type="text" placeholder="身高"/>
-                    <input class="fl" type="text" placeholder="体重"/></section>
+            <h3 class="clearfix title"><em></em><span>个人形象</span><a class="bianji1" href="javascript:;" v-bind:class="{hide:decide.image.isC}" v-on:click="editint('image')">编辑</a></h3>
+            <div class="dak" v-bind:class="{hide:decide.image.isA}">
+                <section class="clearfix"><input class="fl" type="text" v-model="resume.images.height" placeholder="身高"/>
+                    <input class="fl" type="text" v-model="resume.images.weight" placeholder="体重"/></section>
                 <div class="shenghuozhao clearfix">
                     <aside class="aside">
                         <img src="images/ll1.png"/>
@@ -160,30 +160,31 @@
                     </aside>
                 </div>
                 <div class="wanshan wanshan1">
-                    <em class="quxiao">取消</em>
-                    <a class="baocun" href="javascript:;">保存</a>
+                    <em class="quxiao" v-on:click="cancelint('image')">取消</em>
+                    <a class="baocun" href="javascript:;" v-on:click="saveint('image')">保存</a>
                 </div>
                 <div class="clear"></div>
             </div>
-            <dl class="show clearfix">
-                <dd><a class="tianjia" href="javascript:;"></a></dd>
+            <dl class="clearfix moren" v-bind:class="{hide:decide.image.isB}">
+                <dd><a class="tianjia" href="javascript:;" v-on:click="addint('image')"></a></dd>
                 <dt>
                     <p>通过生活照来展示你的形象</p>
                     <p>提高对企业的吸引力</p>
-                    <a class="tianjia" href="javascript:;">完善个人形象</a>
+                    <a class="tianjia" href="javascript:;" v-on:click="addint('image')">完善个人形象</a>
                 </dt>
             </dl>
-            <div class="wancheng hide">
-                <p class="clearfix"><span><var>身高：</var>182厘米</span><span><var>体重：</var>90公斤</span></p>
-                <div class="photo">
+            <div class="wancheng" v-bind:class="{hide:decide.image.isC}">
+                <p class="clearfix"><span><var>身高：</var>{{resume.images.height}}厘米</span><span><var>体重：</var>{{resume.images.weight}}公斤</span></p>
+                <div class="photo clearfix">
                     <img src="images/jl1.png"/>
                     <img src="images/jl2.png"/>
                     <img src="images/jl.png"/>
                 </div>
             </div>
         </div> 
+        <div calss="clear"></div>
          <div class="jbxx">
-            <h3 class="clearfix title title1"><em></em><span>求职意向</span><var class="hide">不确定自己期望的行业和职位？使用职业定位助手来帮你吧。<a href="#">点击这里进入</a></var><a class="bianji1 hide" v-on:click="editint('int')" v-bind:class="{hide:decide.int.isC}" href="javascript:;">编辑</a></h3>
+            <h3 class="clearfix title title1"><em></em><span>求职意向</span><var class="hide">不确定自己期望的行业和职位？使用职业定位助手来帮你吧。<a href="#">点击这里进入</a></var><a class="bianji1" v-on:click="editint('int')" v-bind:class="{hide:decide.int.isC}" href="javascript:;">编辑</a></h3>
             <div class="dak" v-bind:class="{hide:decide.int.isA}">
                   <section class="clearfix"><span class="mar2"><b>打断</b>期望行业：</span>
                     <div class="xiala xiala1">
@@ -198,14 +199,14 @@
                     </div>
                 </section>
                 <section class="clearfix">
-                    <span class="mar2"><b>打断</b>期望职位：</span><input class="fl w364" type="text" value=""  v-model="resume.intent.position"/>
+                    <span class="mar2"><b>打断</b>期望职位：</span><input class="fl w364" type="text" placeholder="" v-model="resume.intent.position"/>
                 </section>
                 <section class="clearfix">
-                    <span class="mar2"><b>打断</b>期望底薪：</span><input class="fl w364" type="text" value=""  v-model="resume.intent.salary"/>
+                    <span class="mar2"><b>打断</b>期望底薪：</span><input class="fl w364" type="text" placeholder=""  v-model="resume.intent.salary"/>
                 </section>
                 <section class="clearfix"><span class="mar2">期望工作地区：</span>
                     <div class="xiala xiala2">
-                        <p>{{resume.intent.business_trip1}}</p>
+                        <p>{{resume.intent.business_trip1 | typeSelect "省"}}</p>
                         <select v-model="resume.intent.business_trip1">
                             <option>河北</option>
                             <option>北京</option>
@@ -214,7 +215,7 @@
                         </select>
                     </div>
                     <div class="xiala xiala2 pr">
-                    <p>{{resume.intent.business_trip}}</p>
+                    <p>{{resume.intent.business_trip | typeSelect "市"}}</p>
                         <select v-model="resume.intent.business_trip">
                             <option>承德</option>
                             <option>石家庄</option>
@@ -225,16 +226,16 @@
                     <label class="pr"><input class="sex se" value="可出差" type="checkbox" v-model="resume.chuchai"/>可出差<span class="chuchai"></span></label>
                 </section>
                 <section class="clearfix">
-                    <span class="mar2">期望销售产品：</span><input class="fl w364" type="text" value="" v-model="resume.intent.production"/>
+                    <span class="mar2">熟练使用工具：</span><input class="fl w364" placeholder="" type="text" v-model="resume.intent.pro"/>
                 </section>
                 <section class="clearfix">
-                    <span class="mar2">期望销售产品：</span><div class="fl spanfix">
-                    <label class="pr"><input class="sex se" value="店面销售" type="checkbox" v-model="resume.intent.sell_mode"/>店面销售<span class="chuchai chuchai1"></span></label>
-                    <label class="pr"><input class="sex se" value="电话销售" type="checkbox" v-model="resume.intent.sell_mode"/>电话销售<span class="chuchai chuchai1"></span></label>
-                    <label class="pr"><input class="sex se" value="渠道销售" type="checkbox" v-model="resume.intent.sell_mode"/>渠道销售<span class="chuchai chuchai1"></span></label>
-                    <label class="pr"><input class="sex se" value="网络销售" type="checkbox" v-model="resume.intent.sell_mode"/>网络销售<span class="chuchai chuchai1"></span></label>
-                    <label class="pr"><input class="sex se" value="面访销售" type="checkbox" v-model="resume.intent.sell_mode"/>面访销售<span class="chuchai chuchai1"></span></label>
-                    <label class="pr"><input class="sex se" value="大客户销售" type="checkbox" v-model="resume.intent.sell_mode" />大客户销售<span class="chuchai chuchai1"></span></label>
+                    <span class="mar2">擅长网页技术：</span><div class="fl spanfix">
+                    <label class="pr"><input class="sex se" value="HTML/XHTML" type="checkbox" v-model="resume.intent.sell_mode"/>HTML/XHTML<span class="chuchai chuchai1"></span></label>
+                    <label class="pr"><input class="sex se" value="photoshop" type="checkbox" v-model="resume.intent.sell_mode"/>photoshop<span class="chuchai chuchai1"></span></label>
+                    <label class="pr"><input class="sex se" value="CSS" type="checkbox" v-model="resume.intent.sell_mode"/>CSS<span class="chuchai chuchai1"></span></label>
+                    <label class="pr"><input class="sex se" value="Javascript" type="checkbox" v-model="resume.intent.sell_mode"/>Javascript<span class="chuchai chuchai1"></span></label>
+                    <label class="pr"><input class="sex se" value="Sublime" type="checkbox" v-model="resume.intent.sell_mode"/>Sublime<span class="chuchai chuchai1"></span></label>
+                    <label class="pr"><input class="sex se" value="Javascript语言核心技术DOM、BOM、Ajax" type="checkbox" v-model="resume.intent.sell_mode" />Javascript语言核心技术DOM、BOM、Ajax<span class="chuchai chuchai1"></span></label>
                     </div>
                 </section>
                 <div class="wanshan wanshan1">
@@ -256,8 +257,8 @@
                 <p><var>期望职位：</var>{{resume.intent.position}}</p>
                 <p><var>期望工作地区：</var>{{resume.intent.business_trip1}}-{{resume.intent.business_trip}}</p>
                 <p><var>期望底薪：</var>{{resume.intent.salary}}</p>
-                <p><var>期望销售产品：</var>{{resume.intent.production}}</p>
-                <p><var>销售方式：</var>{{resume.intent.sell_mode}}</p>
+                <p><var>熟练使用工具：</var>{{resume.intent.pro}}</p>
+                <p><var>擅长网页技术：</var>{{resume.intent.sell_mode}}</p>
             </div>
         </div>  
         <div class="jbxx jbxx1" id="gzjl">
@@ -366,40 +367,40 @@
             </div>
         </div>
          <div class="jbxx jbxx1">
-            <h3 class="clearfix title title1"><em></em><span>教育培训</span><a class="tianjia1 hide" href="javascript:;">添加教育经历</a><a class="tianjia1 hide" href="javascript:;">添加培训经历</a></h3>
+            <h3 class="clearfix title title1"><em></em><span>教育培训</span><a class="tianjia1" href="javascript:;" v-on:click="addWork(-100,'education')" v-bind:class="{'hide':decide.education.isC}">添加教育经历</a><a class="tianjia1" href="javascript:;" v-bind:class="{'hide':decide.education.isC}">添加培训经历</a></h3>
            
-            <div class="hide dak">
-                 <section class="clearfix"><input class="fl" type="text" placeholder="学校名称"/>
-                    <input class="fl" type="text" placeholder="专业"/>
+            <div class="dak" v-bind:class="{'hide':decide.education.isA}">
+                 <section class="clearfix"><input class="fl" type="text" placeholder="学校名称" v-model="expItem.name"/>
+                    <input class="fl" type="text" placeholder="专业" v-model="expItem.rog"/>
                 </section>
                 <section class="clearfix">
                     <div class="xiala xiala3 ">
-                        <p>开始年份</p>
-                        <select>
+                        <p>{{expItem.start_year | typeSelect "开始年份"}}</p>
+                        <select v-model="expItem.start_year">
                             <option>2016</option>
                             <option>2017</option>
                             <option>2018</option>
                         </select>
                     </div>
                     <div class="xiala xiala3">
-                        <p>开始月份</p>
-                        <select>
+                        <p>{{expItem.start_manth | typeSelect "开始月份"}}</p>
+                        <select v-model="expItem.start_manth">
                             <option>2</option>
                             <option>3</option>
                             <option>12</option>
                         </select>
                     </div>
                     <div class="xiala xiala3">
-                        <p>结束年份</p>
-                        <select>
+                        <p>{{expItem.end_year | typeSelect "结束年份"}}</p>
+                        <select v-model="expItem.end_year">
                             <option>1206</option>
                             <option>2017</option>
                             <option>2018</option>
                         </select>
                     </div>
                     <div class="xiala xiala3">
-                        <p>结束月份</p>
-                        <select>
+                        <p>{{expItem.end_manth | typeSelect "结束月份"}}</p>
+                        <select v-model="expItem.end_manth">
                             <option>2</option>
                             <option>10</option>
                             <option>5</option>
@@ -409,8 +410,8 @@
                 </section>
                 <section>
                     <div class="xiala xiala5">
-                        <p>学历</p>
-                        <select>
+                        <p>{{expItem.record | typeSelect "学历"}}</p>
+                        <select v-model="expItem.record">
                             <option>大专2</option>
                             <option>本科</option>
                             <option>5</option>
@@ -418,23 +419,22 @@
                     </div>
                 </section>
                 <div class="wanshan wanshan1">
-                    <em class="quxiao">取消</em>
-                    <a class="baocun" baocun="baocun6" href="javascript:;">保存</a>
+                    <em class="quxiao" v-on:click="cancelWork('train','education')">取消</em>
+                    <a class="baocun" baocun="baocun6" href="javascript:;" v-on:click="saveWork(expItem,'education','train')">保存</a>
                 </div>
                 <div class="clear"></div>
             </div>
-            <dl class="show clearfix">
-                <dd><a class="tianjia" href="javascript:;"></a></dd>
+            <dl class="clearfix" v-bind:class="{'hide':decide.education.isB}">
+                <dd><a class="tianjia" href="javascript:;" v-on:click="addWork(-99,'education')"></a></dd>
                 <dt>
                     <p>教育培训经历可以充分体现你的专业能力，</p>
                     <p>更能体现你的学习能力和潜力</p>
-                    <a class="tianjia" href="javascript:;">添加教育经历</a>
-                    <a class="tianjia" href="javascript:;">添加培训经历</a>
+                    <a class="tianjia" href="javascript:;" v-on:click="addWork(-99,'education')">添加教育经历</a>
+                    <a class="tianjia" href="javascript:;" v-on:click="addWork(-99,'education')">添加培训经历</a>
                 </dt>
             </dl>
-            <div class="wancheng hide"> 
-                <p><em></em>北京交通大学 - 计算机科学与技术 - 硕士<a class="shanchu" href="javascript:;">删除</a><a class="bianji2" href="javascript:;">编辑</a></p>
-                <p><em></em>培训名称 - 培训机构<i>销售业绩尚未填写！<a href="#">立即填写</a></i><a class="shanchu" href="javascript:;">删除</a><a class="bianji2" href="javascript:;">编辑</a></p>
+            <div class="wancheng" v-bind:class="{'hide':decide.education.isC}"> 
+                <p v-for="item in resume.train"><em></em>{{item.name}}-{{item.rog}}-{{item.record}}<a class="shanchu" href="javascript:;" v-on:click="delWork($index,'education','train')">删除</a><a class="bianji2" href="javascript:;" v-on:click="editWork($event,'education',item,$index)">编辑</a></p>
             </div>
         </div> 
         <div class="jbxx jbxx1">
@@ -563,6 +563,6 @@
         app.init();
     });
 </script>
-<!-- <script type="text/javascript" src="../js/jquery.js" source="widget"></script>
-<script type="text/javascript" src="../js/sea.js" source="widget"></script> -->
+<script type="text/javascript" src="../js/jquery.js" source="widget"></script>
+<script type="text/javascript" src="../js/sea.js" source="widget"></script>
 </body>

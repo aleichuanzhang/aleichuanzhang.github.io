@@ -1,0 +1,191 @@
+{
+    "_id" : "",
+    "name":"雷鸣",
+    "sex" : "男",
+    "age" : "31",
+    "avatar": "/asets/images/img.png",
+    "birthday": "1986.09.19",
+    "constellation":"",
+    "zodiac":"",
+    "city_live" : {
+        "province" : "北京",
+        "city" : "昌平"
+    },
+    "city_birth" : {
+        "province":"河北",
+        "city":"承德"
+    },
+    "resigned" : "true",
+    "telephone" : "15116922755",
+    "email":"377655324@qq.com",
+    "work_experience" : "1年",
+    "intent": 
+        {
+            "industry": "互联网",
+            "position": "web前端工程师",
+            "area_province": "area_province",
+            "area_city": "area_city",
+            "salary": "12k",
+            "pro": "git，svn等版本控制工具",
+            "sell_mode": ["HTML/XHTML","photoshop","CSS","Javascript","Sublime","Javascript语言核心技术DOM、BOM、Ajax","等"],
+            "business_trip1": "",
+            "business_trip": "北京"
+        },
+    "images": 
+        {
+            "height": "168",
+            "weight": "60"
+        },
+    "language": [
+        {
+            "category":"西班牙",
+            "listen": "听力",
+            "speak": "口语",
+            "read": "阅读",
+            "write": "写作"
+        },
+        {
+            "category":"法语",
+            "listen": "听力",
+            "speak": "口语",
+            "read": "阅读",
+            "write": "写作"
+        },
+        {
+            "category":"英语",
+            "listen": "听力",
+            "speak": "口语",
+            "read": "阅读",
+            "write": "写作"
+        }
+    ],
+    "work_history": [
+        {
+            "company":"京东",
+            "position":"web前端",
+            "start_year":"",
+            "end_year":"",
+            "sales_type":"",
+            "reportto":"",
+            "subordinate":"",
+            "desc":"",
+            "sales_year":"",
+            "finish_rate":"",
+            "productions":"",
+            "sell_target":"",
+            "sell_mode":""
+        },
+        {
+            "company":"淘宝",
+            "position":"销售",
+            "start_year":"",
+            "end_year":"",
+            "sales_type":"",
+            "reportto":"",
+            "subordinate":"",
+            "desc":"",
+            "sales_year":"",
+            "finish_rate":"",
+            "productions":"",
+            "sell_target":"",
+            "sell_mode":""
+        },
+        {
+            "company":"不知道",
+            "position":"后端工程师",
+            "start_year":"",
+            "end_year":"",
+            "sales_type":"",
+            "reportto":"",
+            "subordinate":"",
+            "desc":"",
+            "sales_year":"",
+            "finish_rate":"",
+            "productions":"",
+            "sell_target":"",
+            "sell_mode":""
+        },
+        {
+            "company":"雷鸣",
+            "position":"阿雷船长",
+            "start_year":"",
+            "end_year":"",
+            "sales_type":"",
+            "reportto":"",
+            "subordinate":"",
+            "desc":"",
+            "sales_year":"",
+            "finish_rate":"",
+            "productions":"",
+            "sell_target":"",
+            "sell_mode":""
+        },
+        {
+            "company":"智联",
+            "position":"运维工程师",
+            "start_year":"",
+            "end_year":"",
+            "sales_type":"",
+            "reportto":"",
+            "subordinate":"",
+            "desc":"",
+            "sales_year":"",
+            "finish_rate":"",
+            "productions":"",
+            "sell_target":"",
+            "sell_mode":""
+        }
+    ],
+    "edu_history": [
+        {
+            "school":"不知道学校",
+            "major":"不知道赚特",
+            "level":"硕士",
+            "start_year":"开始时间",
+            "end_year":"线束时间："
+        },
+        {
+            "school":"知道",
+            "major":"乍知道",
+            "level":"博士",
+            "start_year":"开始时间",
+            "end_year":"线束时间："
+        }
+    ],
+     "certificate":[
+        {
+            "name":"证书名称",
+            "rog":"发证机构",
+            "start_year":"开始时间",
+            "end_year":"线束时间："
+        },
+        {
+            "name":"不知道证书",
+            "rog":"不知道机构",
+            "start_year":"开始时间",
+            "end_year":"线束时间："
+        },
+        {
+            "name":"毕业证",
+            "rog":"新航路",
+            "start_year":"开始时间",
+            "end_year":"线束时间："
+        }
+    ],
+    "train":[
+        {
+            "name":"河北广播电视大学",
+            "rog":"电视节目制作",
+            "start_year":"2007",
+            "record":"大专", 
+            "end_year":"2009："
+        },
+        {
+            "name":"新航路师徒学院",
+            "rog":"web前端",
+            "start_year":"2016",
+            "record":"大专", 
+            "end_year":"2016"
+        }
+    ]
+}

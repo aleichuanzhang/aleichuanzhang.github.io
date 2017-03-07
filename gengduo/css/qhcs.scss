@@ -1,0 +1,78 @@
+@import"qbjc";
+.pin-a{
+    height:pxToRem(63);
+    background:#f5f4f0;
+    font-size:pxToRem(24);
+    color:#999;
+    line-height:pxToRem(62);
+    padding-left:pxToRem(31);
+}
+.chengshi{
+    width:100%;
+    tr{
+        th,td{
+            width:33.33333%;
+            border:1px #e0e0e0 solid;
+            height:pxToRem(79);
+            font-weight:normal;
+            text-align:center;
+            overflow:hidden;
+            a{
+                color:#333;
+                font-size:pxToRem(28);
+            }
+        }
+        th:nth-child(odd),td:nth-child(odd){
+        border-left:0;
+        border-right:0;
+        }
+    }
+}
+.qhcs-ft{
+    background:#f5f4f0;
+    height:pxToRem(151);
+}
+.qhcs-latter{
+    width:100%;
+    tr{
+        td{
+            width:20%;
+            border:1px red solid;
+            height:pxToRem(80);
+            text-align:center;
+            overflow:hidden;
+            a{
+                color:#333;
+                font-size:pxToRem(28);
+            }
+        }
+        td:nth-child(odd){
+        border-left:0;
+        border-right:0;
+        }
+    }
+}
+.qhcs-latter1{
+    width:100%;
+    tr{
+        td{
+            width:25%;
+            border:1px blue solid;
+            height:pxToRem(80);
+            text-align:center;
+            overflow:hidden;
+            a{
+                color:#333;
+                font-size:pxToRem(28);
+            }
+        }
+        
+        td:nth-child(even){
+        border-right:0;
+        }
+        td:nth-child(1){
+        border-left:0;
+        }
+
+    }
+}

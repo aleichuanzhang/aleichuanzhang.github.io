@@ -1,0 +1,152 @@
+.remen{
+    height:pxToRem(53);
+    padding:pxToRem(25) pxToRem(32) 0 pxToRem(30);
+    background:#fff;
+    span{
+        float:left;
+        background:url(i/icon3s.png?__base64) 0 0 no-repeat;
+        padding-left:pxToRem(25);
+        color:#666;
+        font-size:pxToRem(24);
+        line-height:pxToRem(28);
+        height:pxToRem(28);
+        background-size:pxToRem(6) pxToRem(28);
+    }
+    a{
+        float:right;
+        color:#00b459;
+        font-size:pxToRem(22);
+        line-height:pxToRem(28);
+    }
+}
+.laoshi{
+    background:#f5f4f0;
+    border-top:1px #edece8 solid;
+    border-bottom:1px #edece8 solid;
+    ul{
+        padding:pxToRem(9) pxToRem(10) pxToRem(19) pxToRem(10);
+        
+        // width:pxToRem(617);
+        // margin:0 auto;
+        li{
+            margin:pxToRem(10) 0 0 pxToRem(10);
+            border:pxToRem(1) #e5e5e5 solid;
+            float:left;
+            background:#fff;
+            padding:pxToRem(40) 0 pxToRem(14) 0;
+            width:47%;
+            a{
+                height:pxToRem(132);
+                border-bottom:pxToRem(1) #ebebeb solid;
+                display:block;
+                img{
+                    float:left;
+                    width:pxToRem(80);
+                    height:pxToRem(80);
+                    margin-left:pxToRem(22);
+                }
+                dl{
+                    margin-left:pxToRem(120);
+                   
+                   dt{
+                       height:pxToRem(30);
+                        strong{
+                            height:pxToRem(30);
+                            font-size:pxToRem(28);
+                            line-height:pxToRem(30);
+                            margin-right:pxToRem(8);
+                            color:#333;
+                            float:left;
+                        }
+                        span{
+                            height:pxToRem(30);
+                            font-size:pxToRem(22);
+                            line-height:pxToRem(30);
+                            color:#666;
+                            float:left;
+                        }
+                   }
+                   .renmin{
+                        color:#999;
+                        font-size:pxToRem(20);
+                        line-height:pxToRem(44);
+                        overflow:hidden;
+                        height:pxToRem(44);
+                   }
+                   .jibie{
+                        em{
+                            font-style:normal;
+                            font-size:pxToRem(16);
+                            color:#fff;
+                            padding:pxToRem(3) 5px pxToRem(4);
+                            background:#6897c6;
+                            border-radius:pxToRem(2);
+                            display:inline-block;
+                        }
+                   }
+                   .teji{
+                        em{
+                            background:#ee774c;
+                        }
+                   }
+                }
+               
+            }
+            .lao-renshu{
+                height:pxToRem(59);
+                p{
+                    font-size:pxToRem(20);
+                    line-height:pxToRem(31);
+                    margin-top:pxToRem(14);
+                    height:pxToRem(31);
+                    text-align:center;
+                    width:50%;
+                    border-right:pxToRem(1) #ebebeb solid;
+                    box-sizing:border-box;
+                    em{
+                        font-style:normal;
+                        color:#30c278;
+                        height:pxToRem(31);
+                        margin-right:pxToRem(7);
+                        
+                    }
+                    span{
+                        color:#ccc;
+                        height:pxToRem(31);
+                        overflow:hidden;
+                    }
+                } 
+                .no-border{
+                    border:none;
+                }
+            }
+        }
+    }
+}
+.xueke{
+    height:pxToRem(276);
+    background:#f5f4f0;
+    border-top:pxToRem(1) #e5e5e5 solid;
+    border-bottom:pxToRem(1) #e5e5e5 solid;
+    overflow:hidden;
+    li{
+        width:20%;
+        border-right:pxToRem(1) #ebebeb solid;
+        border-bottom:pxToRem(1) #ebebeb solid;
+        float:left;
+        height:pxToRem(128);
+        text-align:center;
+        background:#fff;
+        box-sizing:border-box;
+        a{
+            display:block;
+            color:#333;
+            font-size:pxToRem(22);
+            line-height:pxToRem(53);
+            padding-top:pxToRem(72);
+            background:url(i/xueke1.png?__base64) 0 0 no-repeat;
+            background-size:100% pxToRem(72);
+            width:100%;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+ .banner{
+    padding:0 pxToRem(10) pxToRem(10) pxToRem(10);
+    border-top:1px #dedede solid;
+    border-bottom:1px #dedede solid;
+    li{
+        width:50%;
+        margin-top:pxToRem(20);
+        padding:0 pxToRem(10);
+        box-sizing:border-box;
+        img{
+        display:block;
+        height:pxToRem(145);
+        border-radius:4px;
+        width:100%;
+        }
+        a{
+            height:pxToRem(145);
+            background:red;
+            opacity:0;
+            z-index:1;
+            width:100%;
+            left:0;
+            top:0;
+        }
+    }
+    
+    
+}

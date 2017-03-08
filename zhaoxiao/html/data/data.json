@@ -37,32 +37,12 @@
             "weight": "60"
         },
     "language": [
-        {
-            "category":"西班牙",
-            "listen": "听力",
-            "speak": "口语",
-            "read": "阅读",
-            "write": "写作"
-        },
-        {
-            "category":"法语",
-            "listen": "听力",
-            "speak": "口语",
-            "read": "阅读",
-            "write": "写作"
-        },
-        {
-            "category":"英语",
-            "listen": "听力",
-            "speak": "口语",
-            "read": "阅读",
-            "write": "写作"
-        }
+       
     ],
     "work_history": [
         {
-            "company":"京东",
-            "position":"web前端",
+            "company":"华庭婚纱摄影有限公司",
+            "position":"摄影师",
             "start_year":"",
             "end_year":"",
             "sales_type":"",
@@ -76,53 +56,8 @@
             "sell_mode":""
         },
         {
-            "company":"淘宝",
-            "position":"销售",
-            "start_year":"",
-            "end_year":"",
-            "sales_type":"",
-            "reportto":"",
-            "subordinate":"",
-            "desc":"",
-            "sales_year":"",
-            "finish_rate":"",
-            "productions":"",
-            "sell_target":"",
-            "sell_mode":""
-        },
-        {
-            "company":"不知道",
-            "position":"后端工程师",
-            "start_year":"",
-            "end_year":"",
-            "sales_type":"",
-            "reportto":"",
-            "subordinate":"",
-            "desc":"",
-            "sales_year":"",
-            "finish_rate":"",
-            "productions":"",
-            "sell_target":"",
-            "sell_mode":""
-        },
-        {
-            "company":"雷鸣",
-            "position":"阿雷船长",
-            "start_year":"",
-            "end_year":"",
-            "sales_type":"",
-            "reportto":"",
-            "subordinate":"",
-            "desc":"",
-            "sales_year":"",
-            "finish_rate":"",
-            "productions":"",
-            "sell_target":"",
-            "sell_mode":""
-        },
-        {
-            "company":"智联",
-            "position":"运维工程师",
+            "company":"北京新航路科技有限公司",
+            "position":"web前端工程师",
             "start_year":"",
             "end_year":"",
             "sales_type":"",
@@ -154,14 +89,8 @@
     ],
      "certificate":[
         {
-            "name":"证书名称",
-            "rog":"发证机构",
-            "start_year":"开始时间",
-            "end_year":"线束时间："
-        },
-        {
-            "name":"不知道证书",
-            "rog":"不知道机构",
+            "name":"毕业证",
+            "rog":"河北广播电视大学",
             "start_year":"开始时间",
             "end_year":"线束时间："
         },

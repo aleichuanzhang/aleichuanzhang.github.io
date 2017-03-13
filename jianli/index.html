@@ -41,8 +41,8 @@
                 <article>
                     <section class="clearfix">
                         <input class="fl" type="text" placeholder="姓名" v-model="resume.name"/><span>性别：</span>
-                        <label><input class="sex" type="radio" name="sex" value="男" v-model="resume.sex"/>男</label>
-                        <label><input class="sex" type="radio" name="sex" value="女" v-model="resume.sex"/>女</label>
+                        <label><input class="sex" type="radio" name="sex" value="male" v-model="resume.sex"/>男</label>
+                        <label><input class="sex" type="radio" name="sex" value="female" v-model="resume.sex"/>女</label>
                     </section>
                     <section class="clearfix"><input class="fl" type="text" placeholder="生日" v-model="resume.birthday"/>
                         <div class="xiala">
@@ -115,7 +115,7 @@
             <dl class="bianjihou" v-bind:class="{hide:decide.base.isB}">
                 <dd><img src="images/jl.png" alt=""/></dd>
                 <dt>
-                    <h4 class="clearfix"><span>{{resume.name}}</span><i>{{resume.sex}}/</i><var>{{resume.age}}岁</var></h4>
+                    <h4 class="clearfix"><span>{{resume.name}}</span><i>{{resume.sex | typeSex}}/</i><var>{{resume.age}}岁</var></h4>
                     <div class="clearfix juzhudi"><span>现居地：{{resume.city_live.province}}-{{resume.city_live.city}}</span><span>户口地：{{resume.city_birth.province}}-{{resume.city_birth.city}}</span></div>
                     <div class="juzhudi">工作经验：{{resume.work_experience}}</div>
                 </dt>

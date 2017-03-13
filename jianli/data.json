@@ -1,7 +1,7 @@
 {
     "_id" : "",
     "name":"雷鸣",
-    "sex" : "男",
+    "sex" : "male",
     "age" : "31",
     "avatar": "/asets/images/img.png",
     "birthday": "1986.09.19",
@@ -18,7 +18,7 @@
     "resigned" : "true",
     "telephone" : "15116922755",
     "email":"377655324@qq.com",
-    "work_experience" : "1年",
+    "work_experience" : "2年",
     "intent": 
         {
             "industry": "互联网",

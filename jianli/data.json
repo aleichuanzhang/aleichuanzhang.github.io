@@ -1,31 +1,31 @@
 {
     "_id" : "",
-    "name":"雷鸣",
+    "name":"姓名",
     "sex" : "male",
-    "age" : "31",
+    "age" : "19",
     "avatar": "/asets/images/img.png",
-    "birthday": "1986.09.19",
+    "birthday": "1999.09.19",
     "constellation":"",
     "zodiac":"",
     "city_live" : {
         "province" : "北京",
-        "city" : "昌平"
+        "city" : "北京"
     },
     "city_birth" : {
-        "province":"河北",
-        "city":"承德"
+        "province":"北京",
+        "city":"北京"
     },
     "resigned" : "true",
-    "telephone" : "15116922755",
-    "email":"377655324@qq.com",
-    "work_experience" : "2年",
+    "telephone" : "1511********",
+    "email":"*******@**.com",
+    "work_experience" : "5年",
     "intent": 
         {
             "industry": "互联网",
             "position": "web前端工程师",
             "area_province": "area_province",
             "area_city": "area_city",
-            "salary": "12k",
+            "salary": "0k",
             "pro": "git，svn等版本控制工具",
             "sell_mode": ["HTML/XHTML","photoshop","CSS","Javascript","Sublime","Javascript语言核心技术DOM、BOM、Ajax","等"],
             "business_trip1": "",
@@ -33,16 +33,16 @@
         },
     "images": 
         {
-            "height": "168",
-            "weight": "60"
+            "height": "180",
+            "weight": "80"
         },
     "language": [
       
     ],
     "work_history": [
         {
-            "company":"华庭婚纱摄影有限公司",
-            "position":"摄影师",
+            "company":"淘宝",
+            "position":"ui",
             "start_year":"",
             "end_year":"",
             "sales_type":"",
@@ -56,7 +56,7 @@
             "sell_mode":""
         },
         {
-            "company":"北京新航路科技有限公司",
+            "company":"京东",
             "position":"web前端工程师",
             "start_year":"",
             "end_year":"",
@@ -90,30 +90,30 @@
      "certificate":[
         {
             "name":"毕业证",
-            "rog":"河北广播电视大学",
+            "rog":"某某大学",
             "start_year":"开始时间",
             "end_year":"线束时间："
         },
         {
             "name":"毕业证",
-            "rog":"新航路",
+            "rog":"北京大学",
             "start_year":"开始时间",
             "end_year":"线束时间："
         }
     ],
     "train":[
         {
-            "name":"河北广播电视大学",
-            "rog":"电视节目制作",
+            "name":"清华大学",
+            "rog":"计算机",
             "start_year":"2007",
-            "record":"大专", 
+            "record":"本科", 
             "end_year":"2009："
         },
         {
-            "name":"新航路师徒学院",
+            "name":"南开大学",
             "rog":"web前端",
             "start_year":"2016",
-            "record":"大专", 
+            "record":"本科", 
             "end_year":"2016"
         }
     ]

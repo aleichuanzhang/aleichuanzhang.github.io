@@ -828,10 +828,10 @@ h3 .gengduo1 {
   border-bottom: 1px #e7e7e7 solid;
 }
 .lm-two-r ul .cur .juti1{
-  display:block;
+  display:none;
 }
 .lm-two-r ul .cur .juti{
-  display:none;
+  display:block;
 }
 .lm-two-r ul li em {
   float: left;

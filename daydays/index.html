@@ -473,17 +473,17 @@
     for(var i=0,len=oLis.length;i<len;i++){
         oLis[i].onmouseover = function(){
             for(var i = 0,len=oLis.length;i<len;i++){
-                oLis[i].className = '';
+                oLis[i].className = 'pr';
             };
-            this.className = 'cur';
+            this.className = 'pr cur';
         };
     }
      for(var i=0,len=oLis.length;i<len;i++){
         oLis[i].onmouseout = function(){
             for(var i = 0,len=oLis.length;i<len;i++){
-                oLis[i].className = 'cur';
+                oLis[i].className = 'pr cur';
             };
-            this.className = '';
+            this.className = 'pr';
         };
     }
 </script>

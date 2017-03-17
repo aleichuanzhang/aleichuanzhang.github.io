@@ -827,7 +827,12 @@ h3 .gengduo1 {
   vertical-align: top;
   border-bottom: 1px #e7e7e7 solid;
 }
-
+.lm-two-r ul .cur .juti1{
+  display:none;
+}
+.lm-two-r ul .cur .juti{
+  display:block;
+}
 .lm-two-r ul li em {
   float: left;
   color: #9a9a9a;
@@ -878,13 +883,13 @@ h3 .gengduo1 {
   top: 0;
 }
 
-.lm-two-r ul li:hover .juti {
+/*.lm-two-r ul li:hover .juti {
   display: block;
 }
 
 .lm-two-r ul li:hover .juti1 {
   display: none;
-}
+}*/
 
 .lm-two-r ul .juti {
   padding-top: 23px;

@@ -297,11 +297,11 @@
     </div>
     <div class="lm-two-r fr">
         <h3><span>名师热度榜</span></h3>
-        <ul>
-            <li class="pr">
-                <div class="clearfix hide">
+        <ul id="ul">
+            <li class="pr cur">
+                <div class="clearfix juti1">
                 <em class="diyi">1</em><b>司徒如玉</b><span>高中数学</span><var>8750节微课</var></div>
-                <div class="show juti"><em class="diyi">1</em><dl class="fl"><dd><img src="images/mingshi2.png"></dd><dt><h4>司徒如玉</h4><p>高中语文</p><p>1.2w节微课</p></dt></dl></div>
+                <div class="juti"><em class="diyi">1</em><dl class="fl"><dd><img src="images/mingshi2.png"></dd><dt><h4>司徒如玉</h4><p>高中语文</p><p>1.2w节微课</p></dt></dl></div>
                 <a href="#"></a>
             </li>
             <li class="pr">
@@ -467,5 +467,17 @@
         </ol>
     </div>
 </div>
+<script type="text/javascript">
+    var oul = document.getElementById('ul');
+    var oLi = oul.getElementsByTagName('li');
+    for(var i=0,len=oLis.length;i<len;i++){
+        oLis[i].onmouseover = function(){
+            for(var i = 0,len=oLis.length;i<len;i++){
+                oLis[i].className = '';
+            };
+            this.className = 'cur';
+        };
+    }
+</script>
 </body>
 </html>

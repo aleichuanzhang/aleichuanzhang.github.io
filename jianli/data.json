@@ -8,12 +8,12 @@
     "constellation":"",
     "zodiac":"",
     "city_live" : {
-        "province" : "",
-        "city" : ""
+        "province" : "北京",
+        "city" : "昌平"
     },
     "city_birth" : {
-        "province":"",
-        "city":""
+        "province":"河北",
+        "city":"承德"
     },
     "resigned" : "true",
     "telephone" : "1511********",

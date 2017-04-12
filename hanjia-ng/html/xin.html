@@ -1,0 +1,160 @@
+<!DOCTYPE html>                                                  
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>test</title>
+<script language="javascript" src="wz_jsgraphics.js" type="text/javascript"></script>
+</head>
+<body>
+	<input id="butdraw" value="draw" type="button" onclick="get();" />
+
+	<div id="testOne" style="color:blue; left: 0px;overflow: visible; width: 600px; position: absolute; ; top: 50px; height: 150px;background:black;float:left;"></div>
+	<div id="testOne1" style="color:blue; left: 0px;overflow: visible; width: 0px; position: absolute; ; top: 50px; height: 150px;background:black;float:left;"></div>
+	<div id="testOne2" style="color:blue; left: 0px;overflow: visible; width: 0px; position:absolute; top: 50px; height: 150px;background:black;float:left; "></div>
+
+	<div id="testTwo" style="color:blue; left: 0px;overflow: visible; width: 600px; position: absolute; ; top:202px; height: 150px;background:black;float:left;"></div>
+	<div id="testTwo1" style="color:blue; left: 0px;overflow: visible; width: 0px; position: absolute; ; top: 202px; height: 150px;background:black;float:left;"></div>
+	<div id="testTwo2" style="color:blue; left: 0px;overflow: visible; width: 0px; position:absolute; top: 202px; height: 150px;background:black;float:left; "></div>
+
+	<div id="testThree" style="color:blue; left: 0px;overflow: visible; width: 600px; position: absolute; top:354px; height: 150px;background:black;float:left;"></div>
+	<div id="testThree1" style="color:blue; left: 0px;overflow: visible; width: 0px; position: absolute; top: 354px; height: 150px;background:black;float:left;"></div>
+	<div id="testThree2" style="color:blue; left: 0px;overflow: visible; width: 0px; position:absolute; top: 354px; height: 150px;background:black;float:left; "></div>
+
+	<div id="testFour" style="color:blue; left: 0px;overflow: visible; width: 600px; position: absolute; top: 506px; height: 150px;background:black;float:left;"></div>
+	<div id="testFour1" style="color:blue; left: 0px;overflow: visible; width: 0px; position: absolute; top: 506px; height: 150px;background:black;float:left;"></div>
+	<div id="testFour2" style="color:blue; left: 0px;overflow: visible; width: 0px; position:absolute;top: 506px; height: 150px;background:black;float:left; "></div>
+
+	<script type="text/javascript">
+			var temps = new Array(0x7E,
+			0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7B,0x7B,0x7B,
+			0x7B,0x7B,0x7B,0x7A,0x7A,0x7A,0x7B,0x7A,0x7B,0x7B,0x7B,0x7B,
+			0x7B,0x7B,0x7B,0x7A,0x7A,0x7A,0x7A,0x7A,0x7B,0x7B,0x7B,0x7B,
+			0x7C,0x7D,0x7E,0x7E,0x7F,0x7F,0x80,0x80,0x80,0x7F,0x7F,0x7E,
+			0x7E,0x7D,0x7C,0x7C,0x7B,0x7B,0x7B,0x7A,0x7A,0x7B,0x7A,0x7A,
+			0x7A,0x7A,0x7A,0x7A,0x7A,0x79,0x7A,0x7C,0x80,0x85,0x8B,0x92,
+			0x96,0x98,0x98,0x95,0x8F,0x89,0x83,0x7D,0x79,0x77,0x76,0x77,
+			0x79,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,
+			0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7B,0x7B,0x7B,0x7B,0x7B,0x7B,
+			0x7C,0x7C,0x7C,0x7C,0x7D,0x7D,0x7E,0x7E,0x7F,0x7F,0x7F,0x80,
+			0x80,0x81,0x81,0x82,0x82,0x83,0x83,0x83,0x84,0x84,0x85,0x85,
+			0x85,0x86,0x86,0x86,0x86,0x86,0x86,0x86,0x86,0x85,0x85,0x84,
+			0x83,0x83,0x82,0x81,0x80,0x7F,0x7E,0x7E,0x7D,0x7C,0x7C,0x7B,
+			0x7B,0x7B,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,
+			0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,
+			0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,
+			0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,
+			0x7A,0x7A,0x7A,0x7B,0x7B,0x7B,0x7C,0x7D,0x7E,0x7E,0x7F,0x7F,
+			0x7F,0x80,0x80,0x7F,0x7F,0x7F,0x7E,0x7D,0x7C,0x7C,0x7B,0x7A,
+			0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7A,0x7B,0x7B,0x7B,0x7B,
+			0x7B,0x7B,0x7A,0x7A,0x7A,0x7B,0x7A,0x7B,0x7B,0x7B,0x7B,0x7B,
+			0x7B,0x7B,0x7A,0x7A,0x7A,0x7A,0x7A,0x7B,0x7B,0x7B,0x7C,0x7D,
+			0x7E,0x7E,0x7F,0x7F,0x80,0x80,0x80,0x7F,0x7F,0x7E,0x7E,0x7D,
+			0x7C,0x7C,0x7B,0x7B,0x7B,0x7A,0x7A,0x7B,0x7A,0x7A,0x7A,0x7A,
+			0x7A,0x7A,0x7A,0x79,0x7A,0x7C,0x80,0x85,0x8B,0x92,0x96,0x98,
+			0x98,0x95,0x8F,0x89,0x83,0x7D,0x79,0x77,0x76,0x77,0x79,0x7A,
+			0x7A,0x7A);
+
+		/**
+		*Class 用户网页画图（心电图波形展示 js实现）
+		*Data 20091030
+		*Author 唐子君 
+		*parameter butdrawDiv为桌布,div1为画图布1,div2为画图布2，
+		**/
+		function DranClass(butdrawDiv,div1,div2){
+			var jgOne=new jsGraphics(div1); //画图对象1
+			var jgTwo=new jsGraphics(div2); //画图对象2
+			var oldX = 0;//旧X轴
+			var oldY = 0;//旧Y轴
+			var newX = 0;//新X轴
+			var newY = 0;//新Y轴
+			var cyc = -3;//回转控制变量
+			var jgOneBool = true;//画图布切换开关
+			var jgTwoBool = false;//画图布切换开关
+
+			this.dran = function(value){
+				if(jgOneBool){
+					newX = cyc;
+					//在没有数据时画直线
+					if(value != null){
+						newY = value - 50;
+					}
+					//橡皮檫 将前面显示的波形刷新
+					jgOne.setColor("#000000");
+					jgOne.fillRect(cyc, 0, 20, 150);
+					//画线 用于画波形
+					jgOne.setColor("#99FF66");
+					jgOne.drawLine(oldX, oldY, newX, newY);
+					jgOne.paint();
+					oldX = newX;
+					oldY = newY;
+					//在波形走到最后时回转  重新开始画
+					if(cyc > 570){
+						//控制层之间的显示优先级
+						document.getElementById(butdrawDiv).style.zIndex = 1;
+						document.getElementById(div1).style.zIndex = 10;
+						document.getElementById(div2).style.zIndex = 20;
+						//清空画图桌布
+						jgTwo.clear();
+						//控制桌布切换
+						jgOneBool = false;
+						jgTwoBool = true;
+						//控制数值转换
+						oldX = 0;
+						newX = 0;
+						cyc = 0;
+					}
+				}else if(jgTwoBool){
+					newX = cyc;
+					if(value != null){
+						newY = value - 50;
+					}
+					jgTwo.setColor("#000000");
+					jgTwo.fillRect(cyc, 0, 20, 150);
+
+					jgTwo.setColor("#99FF66");
+					jgTwo.drawLine(oldX, oldY, newX, newY);
+					jgTwo.paint();
+					oldX = newX;
+					oldY = newY;
+					if(cyc > 570){
+						document.getElementById(butdrawDiv).style.zIndex = 1;
+						document.getElementById(div1).style.zIndex = 20;
+						document.getElementById(div2).style.zIndex = 10;
+						jgOne.clear();
+						jgOneBool = true;
+						jgTwoBool = false;
+						oldX = 0;
+						newX = 0;
+						cyc = 0;
+					}
+				}
+				cyc=cyc+2;
+			}
+		}
+		var i = 0;
+		var a = new DranClass("testOne","testOne1","testOne2");
+		var a1 = new DranClass("testTwo","testTwo1","testTwo2");
+		var a2 = new DranClass("testThree","testThree1","testThree2");
+		var a3 = new DranClass("testFour","testFour1","testFour2");
+		function randomFunc(min,max){
+			return parseInt(Math.random() * (max - min ) + min);
+		}
+		function get(){
+			var tmp = temps[randomFunc(0,temps.length)]
+			if(i < temps.length){
+				temps.shift()
+				temps.push(tmp)
+				a.dran(tmp);
+				a1.dran(temps[i]);
+				a2.dran(temps[i]);
+				a3.dran(temps[i]);
+				i=i+3;
+			}else{
+				i = 0;
+			}
+			setTimeout(get,20);
+		}
+		get()
+	</script>
+</body>
+</html>

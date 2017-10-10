@@ -1,0 +1,130 @@
+{
+    "_id" : "",
+    "name":"雷鸣",
+    "sex" : "male",
+    "age" : "19",
+    "avatar": "/asets/images/img.png",
+    "birthday": "1999.09.19",
+    "constellation":"",
+    "zodiac":"",
+    "city_live" : {
+        "province" : "北京",
+        "city" : "北京"
+    },
+    "city_birth" : {
+        "province":"北京",
+        "city":"北京"
+    },
+    "city" : {
+        "province" : "北京",
+        "qu" : "北京",
+        "city" : "北京"
+    },
+   "city_live" : {
+        "province" : "北京",
+        "city" : "北京"
+    },
+     "ip" : "www.goshining.net",
+    "resigned" : "true",
+    "telephone" : "",
+    "email":"",
+    "work_experience" : "5年",
+    "intent": 
+        {
+            "industry": "互联网",
+            "position": "web前端工程师",
+            "area_province": "area_province",
+            "area_city": "area_city",
+            "salary": "0k",
+            "pro": "git，svn等版本控制工具",
+            "sell_mode": ["HTML/XHTML","photoshop","CSS","Javascript","Sublime","Javascript语言核心技术DOM、BOM、Ajax","等"],
+            "business_trip1": "",
+            "business_trip": "北京"
+        },
+    "images": 
+        {
+            "height": "180",
+            "weight": "80"
+        },
+    "language": [
+      
+    ],
+    "work_history": [
+        {
+            "company":"淘宝",
+            "position":"ui",
+            "start_year":"",
+            "end_year":"",
+            "sales_type":"",
+            "reportto":"",
+            "subordinate":"",
+            "desc":"",
+            "sales_year":"",
+            "finish_rate":"",
+            "productions":"",
+            "sell_target":"",
+            "sell_mode":""
+        },
+        {
+            "company":"京东",
+            "position":"web前端工程师",
+            "start_year":"",
+            "end_year":"",
+            "sales_type":"",
+            "reportto":"",
+            "subordinate":"",
+            "desc":"",
+            "sales_year":"",
+            "finish_rate":"",
+            "productions":"",
+            "sell_target":"",
+            "sell_mode":""
+        }
+    ],
+    "edu_history": [
+        {
+            "school":"不知道学校",
+            "major":"不知道赚特",
+            "level":"硕士",
+            "start_year":"开始时间",
+            "end_year":"线束时间："
+        },
+        {
+            "school":"知道",
+            "major":"乍知道",
+            "level":"博士",
+            "start_year":"开始时间",
+            "end_year":"线束时间："
+        }
+    ],
+     "certificate":[
+        {
+            "name":"毕业证",
+            "rog":"某某大学",
+            "start_year":"开始时间",
+            "end_year":"线束时间："
+        },
+        {
+            "name":"毕业证",
+            "rog":"北京大学",
+            "start_year":"开始时间",
+            "end_year":"线束时间："
+        }
+    ],
+    "train":[
+        {
+            "name":"清华大学",
+            "rog":"计算机",
+            "start_year":"2007",
+            "record":"本科", 
+            "end_year":"2009："
+        },
+        {
+            "name":"南开大学",
+            "rog":"web前端",
+            "start_year":"2016",
+            "record":"本科", 
+            "end_year":"2016"
+        }
+    ]
+}

@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/**
+* @author 象天
+* 2015-09-07
+* px转em
+* 使用:pxToRem(110)
+*
+**/
+body {
+  font-family: "SimHei","Helvetica Neue",Arial,"Droid Sans", sans-serif;
+  color: #333;
+}
+
+html {
+  font-size: 62.5%;
+  /* 10÷16=62.5% */
+}
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+}
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0;
+}
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+/* ios默认文本框阴影 */
+input[type=text], textarea {
+  -webkit-appearance: none;
+}
+
+/* 低版本安卓文本框层级问题 */
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, textarea, input {
+  outline: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+i, cite, var, em {
+  font-style: normal;
+}
+
+.t10 {
+  margin-top: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.img img {
+  display: block;
+}
+
+a img {
+  border: none;
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 73.4% !important;
+    /* 11.75÷16=73.4% */
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 94% !important;
+    /* 15.04÷16=94% */
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 109% !important;
+    /* 17.44÷16=109% */
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 125% !important;
+    /* 20÷16=125% */
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 146.43% !important;
+    /* 24.43÷16=146.43% */
+  }
+}
